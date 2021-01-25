@@ -107,12 +107,12 @@
         <div class="vertical-spacer"></div>
         <h2>Methodik</h2>
 
-        <p>Die Szenarien ergeben sich aus einem Standard-SIR-Modell, wie in [3] beschrieben. Nimmt man darin S(t)≈1 an, kann eine geschlossene Lösung für die täglichen Neuinfektionen ermittelt werden, wenn man konstante Parameter annimmt. Schließlich ergibt sich daraus:</p>
+        <p>Die Szenarien ergeben sich aus der Definition <span class="badge badge-light">R = c[k]/c[k-d]</span>, wie zum Beispiel in [4] beschrieben. <span class="badge badge-light">c[k]</span> beschreibt dann zum Beispiel die Neuinfektionen heute, <span class="badge badge-light">c[k-d]</span> die Neuinfektionen vor <span class="badge badge-light">d</span> Tagen. Im Wesentlichen entspricht das auch der Definition vom RKI. Schließlich ergibt sich daraus:</p>
 
         <ul>
-            <li>Zeitabhängige Inzidenz: <span class="badge badge-light">I(t) = I0 * exp(t*(R-1)/d)</span></li>
-            <li>Halbierungsintervall: <span class="badge badge-light">H = ln(0.5) * d / (R - 1)</span></li>
-            <li>Dauer bis zu einer Ziel-Inzidenz: <span class="badge badge-light">D = ln(Zielinzidenz/Startinzidenz) * d / (R - 1)</span></li>
+            <li>Zeitabhängige Inzidenz: <span class="badge badge-light">I(t) = I0 * exp(t*ln(R)/d)</span></li>
+            <li>Halbierungsintervall: <span class="badge badge-light">H = ln(0.5) * d / ln(R) </span></li>
+            <li>Dauer bis zu einer Ziel-Inzidenz: <span class="badge badge-light">D = ln(Zielinzidenz/Startinzidenz) * d / ln(R)</span></li>
         </ul>
 
         <p>Angenommen wird <span class="badge badge-light">d=4 Tage</span> (entnommen aus [2]).</p>
@@ -120,8 +120,9 @@
         <div class="vertical-spacer"></div>
         <h2>Quellen</h2>
         <p>[1] Christan Althaus. Ein Thread zu Verdoppelungs- und Halbwertszeiten bei SARSCoV2. URL: <a href="https://twitter.com/C_Althaus/status/1327567433142558725?s=20">https://twitter.com/C_Althaus</a>. Abgerufen am 29. Dezember.</p>
-        <p>[2] Matthias an der Heiden and Osamah Hamouda. Schätzung der aktuellen Entwicklung der SARS-CoV-2- Epidemie in Deutschland – Nowcasting. In: Epidemiologisches Bulletin 2020.17 (2020), pp. 10–15. DOI: <a href="http://dx.doi.org/10.25646/6692.4">http://dx.doi.org</a>.</p>
+        <p>[2] Matthias an der Heiden and Osamah Hamouda. Schätzung der aktuellen Entwicklung der SARS-CoV-2- Epidemie in Deutschland – Nowcasting. In: Epidemiologisches Bulletin 2020.17 (2020), pp. 10–15. DOI: <a href="http://dx.doi.org/10.25646/6692.4">https://dx.doi.org</a>.</p>
         <p>[3] James Holland Jones. Notes On R0. 2007. URL: <a href="https://web.stanford.edu/~jhj1/teachingdocs/Jones-on-R0.pdf">https://web.stanford.edu</a></p>
+        <p>[4] Jonas Dehning et al. Model-based and model-free characterization of epidemic outbreaks. In: medRxiv (2020). DOI: <a href="https://www.medrxiv.org/content/10.1101/2020.09.16.20187484v1">https://medrxiv.org</a></p>
     </div>
 </body>
 </html>

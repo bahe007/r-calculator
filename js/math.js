@@ -10,8 +10,11 @@ const d = 4.0;
  * @param {float} R Reproduktionszahl
  */
 function calculateReductionTime(start, target, R) {
-    return Math.round(
+    /*return Math.round(
         Math.log(target/start)*d/(R-1)
+    );*/
+    return Math.round(
+        Math.log(target/start)*d/Math.log(R)
     );
 }
 
@@ -38,7 +41,8 @@ function calculateDailyIncidenceValues(start, R, N) {
     let data = [];
     
     for(let i=0; i<N; i++){
-        data.push( start* Math.exp( (R-1)/d * i ) )
+        // data.push( start* Math.exp( (R-1)/d * i ) )
+        data.push( start*Math.exp(Math.log(R)/d * i) )
     }
 
     return data;
